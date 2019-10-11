@@ -50,7 +50,7 @@ $(function(){
 		        <form action="login" method="post" id="login_form">
 		        	 <table width="225" align="center">
 		        	 	<tr>
-		        	 		<td colspan="2" style="text-align:center;font-size:20px; font-weight:bold">至尊管理系统</td>
+		        	 		<td colspan="2" style="text-align:center;font-size:20px; font-weight:bold">知茗网络管理系统</td>
 		        	 	</tr>
 		        	 	<tr style="height:40px;">
 		        	 		<td>登录名</td>
