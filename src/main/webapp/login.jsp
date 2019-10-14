@@ -6,7 +6,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
 <link rel="stylesheet" type="text/css" href="js/easyui/themes/default/easyui.css">   
-<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">   
+<link rel="stylesheet" type="text/css" href="js/easyui/themes/icon.css">
 <script type="text/javascript" src="js/jquery-1.7.2.js"></script>   
 <script type="text/javascript" src="js/easyui/jquery.easyui.min.js"></script> 
 <style type="text/css">
@@ -30,11 +30,12 @@ $(function(){
 		        	return false;
 		        }
 		    },    
-		    success:function(data){    
+		    success:function(data){
+
 		       	if(data=="1"){
 		       		location.href="page/main.jsp";
 		       	}else{
-		       		$.messager.alert('系统信息','登录失败');  
+		       		$.messager.alert('系统信息','登录失败>'+data+'<');
 		       	}
 		    }    
 		});
@@ -54,7 +55,7 @@ $(function(){
 		        	 	</tr>
 		        	 	<tr style="height:40px;">
 		        	 		<td>登录名</td>
-		        	 		<td><input type="text" name="username"/> </td>
+		        	 		<td><input type="text" name="name"/> </td>
 		        	 	</tr>
 		        	 	<tr style="height:40px;">
 		        	 		<td>

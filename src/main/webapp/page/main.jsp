@@ -5,10 +5,10 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<link rel="stylesheet" type="text/css" href="/js/easyui/themes/default/easyui.css">   
-<link rel="stylesheet" type="text/css" href="/js/easyui/themes/icon.css">   
-<script type="text/javascript" src="/js/jquery-1.7.2.js"></script>   
-<script type="text/javascript" src="/js/easyui/jquery.easyui.min.js"></script> 
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/easyui/themes/default/easyui.css">
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/js/easyui/themes/icon.css">
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="${pageContext.request.contextPath}/js/easyui/jquery.easyui.min.js"></script>
 <script type="text/javascript">
 $(function(){
 	$('#main_tree').tree({    
@@ -33,17 +33,17 @@ $(function(){
 </script>
 </head>
 <body class="easyui-layout">   
-    <div data-options="region:'north',title:'至尊管理系统'" style="height:100px;">
+    <div data-options="region:'north',title:'知茗管理系统'" style="height:100px;">
     	<div style="width:400px;height:70px; float:left;font-size:20px; font-weight:bold;line-height: 70px;padding-left:20px;">
-    		至尊管理系统
+    		知茗管理系统
     	</div>
     	<div style="width:200px;height:70px;float:right;line-height: 70px;">
-    		您好,${user.username },欢迎登录!
+    		您好,${user.name },欢迎登录!
     	</div>
     </div>   
     <div data-options="region:'south',title:'底部声明'" style="height:100px;">
     	<div style="height:70px; line-height: 70px; text-align:center;color:gray">
-    		Copyright &copy; 2017 尚学堂202班级
+    		Copyright &copy; 知茗
     	</div>
     </div>   
     <div data-options="region:'west',title:'菜单'" style="width:200px;">
@@ -52,7 +52,7 @@ $(function(){
     <div data-options="region:'center',title:'内容'" style="padding:5px;background:#eee;">
     	<div id="main_tabs" class="easyui-tabs" style="width:500px;height:250px;" data-options="fit:true">   
 		    <div title="首页" style="padding:20px;">   
-		        tab1    阿斯蒂芬
+		        正文...
 		    </div>  
 		     
 		</div>
