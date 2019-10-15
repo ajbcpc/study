@@ -9,5 +9,7 @@ public class Menu {
     private int id;
     private String text;
     private int pid;
+    private String filename;
+    private Attributes attributes;
     private List<Menu> children;
 }
