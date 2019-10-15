@@ -8,6 +8,7 @@
 </head>
 <body>
 <script type="text/javascript">
+    var operate = 'update';
 function abc(obj){
 	$('#role_dialog').dialog({    
 	    title: '分配权限',    
@@ -53,7 +54,24 @@ $(function(){
 	    toolbar: [{
 			iconCls: 'icon-add',
 			text:'增加',
-			handler: function(){alert('正在建设中')}
+			handler: function(){
+                operate = 'save';
+                $('#role_dialog').dialog({
+                    title: '新建角色',
+                    width: 400,
+                    height: 200,
+                    closed: false,
+                    cache: false,
+                    href: 'sys/role_edit.jsp',
+                    modal: true,
+                    onLoad:function(){
+                        $("#role_edit_form :text:eq(0)").val('');
+                        $("#role_edit_form :text:eq(1)").val('');
+                        $("#role_edit_form :text:eq(2)").val('');
+                        $("#role_edit_form :hidden:eq(0)").val('');
+                    }
+                });
+            }
 		},'-',{
 			iconCls: 'icon-remove',
 			text:'删除',
@@ -62,9 +80,10 @@ $(function(){
 			iconCls: 'icon-edit',
 			text:'修改',
 			handler: function(){
+                operate = 'update';
 				if($("#role_table").datagrid("getSelections").length==1){
 					//弹出窗口
-					$('#role_dialog').dialog({    
+					$('#role_dialog').dialog({
 					    title: '修改角色',    
 					    width: 400,    
 					    height: 200,    

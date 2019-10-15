@@ -8,10 +8,11 @@
 </head>
 <body>
 <script type="text/javascript">
+
 $(function(){
 	$("#role_edit_submit").click(function(){
 		$('#role_edit_form').form('submit', {    
-		    url:"update",    
+		    url:operate,
 		    onSubmit: function(){    
 		        // do some check    
 		        // return false to prevent submit;    
@@ -56,7 +57,7 @@ $(function(){
 	</tr>
 	<tr>
 		<td colspan="2"> 
-		<a id="role_edit_submit" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">修改</a> 
+		<a id="role_edit_submit" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">保存</a>
 		</td>
 	</tr>
 </table>
