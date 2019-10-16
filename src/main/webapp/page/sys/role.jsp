@@ -51,6 +51,7 @@ $(function(){
 	    fitColumns:true,
 	    striped:true,
 	    rownumbers:true,
+        singleSelect:true,
 	    toolbar: [{
 			iconCls: 'icon-add',
 			text:'增加',
@@ -68,7 +69,7 @@ $(function(){
                         $("#role_edit_form :text:eq(0)").val('');
                         $("#role_edit_form :text:eq(1)").val('');
                         $("#role_edit_form :text:eq(2)").val('');
-                        $("#role_edit_form :hidden:eq(0)").val('');
+                        $("#role_edit_form :hidden:eq(0)").val('0');
                     }
                 });
             }

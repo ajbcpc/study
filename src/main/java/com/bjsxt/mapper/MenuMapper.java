@@ -8,8 +8,8 @@ import java.util.List;
 public interface MenuMapper {
 
     @Select("select * from x_menu where pid = 0")
-    public List<Menu> findAllRootMenu();
+     List<Menu> findAllRootMenu();
 
     @Select("select * from x_menu where pid = #{pid}")
-    public List<Menu> findByPid(int pid);
+     List<Menu> findByPid(int pid);
 }

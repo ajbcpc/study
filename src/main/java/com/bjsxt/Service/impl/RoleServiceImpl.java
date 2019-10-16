@@ -21,4 +21,8 @@ public class RoleServiceImpl implements RoleService {
     public int update(Role role) {
         return roleMapper.update(role);
     }
+
+    public int insertOne(Role role) {
+        return roleMapper.insertOne(role);
+    }
 }

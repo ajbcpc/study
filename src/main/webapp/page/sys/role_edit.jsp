@@ -17,11 +17,12 @@ $(function(){
 		        // do some check    
 		        // return false to prevent submit;    
 		    },    
-		    success:function(data){    
+		    success:function(data){
+
 		       	if(data==1){
 		       		$.messager.show({
 		       			title:'系统消息',
-		       			msg:'修改成功',
+		       			msg:'保存成功',
 		       			timeout:3000,
 		       			showType:'slide'
 		       		});
@@ -29,7 +30,7 @@ $(function(){
 		       		$("#role_dialog").dialog("close");
 		       		$('#role_table').datagrid('reload');
 		       	}else{
-		       		$.messager.alert("系统信息","修改失败,请重新修改");
+		       		$.messager.alert("系统信息","保存失败,请重新修改");
 		       	}
 		    }    
 		}); 

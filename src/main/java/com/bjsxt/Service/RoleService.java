@@ -9,4 +9,6 @@ public interface RoleService {
     public List<Role> showRole();
 
     public int update(Role role);
+
+    public int insertOne(Role role);
 }

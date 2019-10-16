@@ -27,4 +27,10 @@ public class RoleController {
         return roleService.update(role);
     }
 
+    @ResponseBody
+    @RequestMapping("page/save")
+    public int save(Role role){
+        return roleService.insertOne(role);
+    }
+
 }
