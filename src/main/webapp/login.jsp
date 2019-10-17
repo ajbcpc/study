@@ -40,7 +40,7 @@ $(function(){
 		    }    
 		});
 	})
-})
+});
 </script>
 </head>
 <body style="background-color:#E9F1FF;">
