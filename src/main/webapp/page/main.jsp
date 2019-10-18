@@ -32,7 +32,9 @@ $(function(){
 			}
 	    }
 	}); 
-})
+});
+
+
 </script>
 </head>
 <body class="easyui-layout">   
@@ -56,6 +58,7 @@ $(function(){
     	<div id="main_tabs" class="easyui-tabs" style="width:500px;height:250px;" data-options="fit:true">   
 		    <div title="首页" style="padding:20px;">   
 		        正文...
+
 		    </div>  
 		     
 		</div>

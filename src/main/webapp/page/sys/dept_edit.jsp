@@ -14,14 +14,28 @@
 </head>
 <body>
 <script type="text/javascript">
+    var editor;
+    function kedit(kedit){
+        editor = KindEditor.create(kedit,{
+            width: '780px',
+            height: '700px',
+            resizeMode: 0,
+            allowPreviewEmoticons: false
+        });
+    }
 
     $(function(){
-        $("#role_edit_submit").click(function(){
-            $('#role_edit_form').form('submit', {
+        kedit('textarea[name="dept_edit_content"]');
+    });
+    $(function(){
+        $("#dept_edit_submit").click(function(){
+            $('#dept_edit_form').form('submit', {
                 url:operate,
+                params:{},
                 onSubmit: function(){
                     // do some check
                     // return false to prevent submit;
+                    editor.sync();
                 },
                 success:function(data){
 
@@ -42,37 +56,16 @@
             });
         })
     });
-    // var editor;
-    // KindEditor.ready(function(K) {
-    //     $.messager.alert("系统信息","111");
-    //     editor = K.create('textarea[name="dept_edit_content"]', {
-    //         allowFileManager : true
-    //     });
-    //     $.messager.alert("系统信息","222");
-    // });
-    function kedit(kedit){
-        var editor = KindEditor.create(kedit,{
-            width: '780px',
-            height: '700px',
-            resizeMode: 0,
-            allowPreviewEmoticons: false
 
-        });
-    }
 
-    $(function(){
-        kedit('textarea[name="dept_edit_content"]');
-    })
 </script>
 <div  style="padding:10px;">
     系统设置 >> 部门管理
     <hr/>
 
-    <form action="" method="post" id="role_edit_form">
+    <form action="" method="post" id="dept_edit_form">
         <input type="hidden" name="id"/>
-        <label>
-            <textarea name="dept_edit_content" style="width:800px;height:400px;visibility:hidden;"  cols="2" rows="3">KindEditor</textarea>
-        </label>
+        <textarea name="dept_edit_content" style="width:800px;height:400px;visibility:hidden;" >KindEditor</textarea>
         <table>
             <tr>
                 <td>标题:</td>
@@ -88,7 +81,7 @@
             </tr>
             <tr>
                 <td colspan="2">
-                    <a id="role_edit_submit" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">保存</a>
+                    <a id="dept_edit_submit" href="#" class="easyui-linkbutton" data-options="iconCls:'icon-search'">保存</a>
                 </td>
             </tr>
         </table>
