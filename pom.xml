@@ -75,6 +75,7 @@
             <artifactId>log4j</artifactId>
             <version>${log4j-version}</version>
         </dependency>
+
         <!-- mysql 驱动类 -->
         <dependency>
             <groupId>mysql</groupId>
@@ -86,6 +87,11 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
             <version>${jackson-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.1.41</version>
         </dependency>
         <!-- apache 图片上传 -->
         <dependency>
